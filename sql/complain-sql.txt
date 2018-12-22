@@ -1,0 +1,27 @@
+create database prodata;
+--------------------------------------------------------------
+use prodata;
+--------------------------------------------------------------
+create table customer
+(email varchar(20) primary key,
+password varchar(20),
+cname varchar(20),
+address varchar(50),
+mobile varchar(15));
+--------------------------------------------------------------
+create table complaint
+(cmpid integer primary key AUTO_INCREMENT,
+pcode varchar(15),
+email varchar(20),
+ctext varchar(100),
+cdate date,
+status varchar(15),
+ecode varchar(20),
+vdate date,
+remark varchar(100));
+--------------------------------------------------------------
+create table products
+(pcode varchar(15) primary key,
+pname varchar(20),
+price integer);
+--------------------------------------------------------------
