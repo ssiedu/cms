@@ -2,7 +2,7 @@
 <body>
 <h3>Customer-Registratoin-Form</h3>
 <hr>
-<form action="SaveCustomer" method="post">
+<form action="CustomerEntry" method="post">
 <pre>
 Email		<input type="text" name="email"/>
 Password	<input type="password" name="password"/>

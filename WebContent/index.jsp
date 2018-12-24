@@ -5,7 +5,7 @@
 <pre>
 <a href="custregi.jsp">New-Customer-Account</a>
 <a href="custlogin.jsp">Customer-Login</a>
-<a href="">Admin-Login</a>
+<a href="adminlogin.jsp">Admin-Login</a>
 <a href="">Engineer-Login</a>
 </pre>
 <hr>
