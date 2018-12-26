@@ -25,3 +25,11 @@ create table products
 pname varchar(20),
 price integer);
 --------------------------------------------------------------
+create table comp_eng
+(cmpid integer,
+ecode varchar(20),
+adate date)
+
+
+
+
