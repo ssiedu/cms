@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -47,6 +48,21 @@ public class VerifyCustomer extends HttpServlet {
 		ResultSet rs=ps.executeQuery();
 		boolean found=rs.next();
 		if(found==true){
+			//store the id/pwd with the help of cookies to client disk
+			String toSave=request.getParameter("save");
+			if(toSave!=null){
+				//step-1 (create cookie object)
+				Cookie c1=new Cookie("mailId",email);
+				Cookie c2=new Cookie("pwd",password);
+				//step-2 (set the maximum age of the cookie)
+				c1.setMaxAge(60*60*24*7);
+				c2.setMaxAge(60*60*24*7);
+				//step-3 (add cookie to response object)
+				response.addCookie(c1);
+				response.addCookie(c2);
+			}
+			
+			
 			response.sendRedirect("customerdashboard.jsp");
 		}else{
 			out.println("<html><body>");

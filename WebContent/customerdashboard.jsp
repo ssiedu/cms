@@ -5,7 +5,7 @@
 	<pre>
 		<a href="">Change-Profile</a>
 		<a href="complaint.jsp">Complaint</a>
-		<a href="">Complaint-Status</a>
+		<a href="showstatus.jsp">Complaint-Status</a>
 		<a href="">Cancel-Complaint</a>
 		<a href="">Logout</a>
 	</pre>
