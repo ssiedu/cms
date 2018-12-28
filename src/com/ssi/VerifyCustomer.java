@@ -12,6 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class VerifyCustomer
@@ -48,6 +49,12 @@ public class VerifyCustomer extends HttpServlet {
 		ResultSet rs=ps.executeQuery();
 		boolean found=rs.next();
 		if(found==true){
+			
+			//storing email to session
+			//step-1 fetch the session object created for this user
+			HttpSession session=request.getSession();
+			session.setAttribute("userid", email);
+			
 			//store the id/pwd with the help of cookies to client disk
 			String toSave=request.getParameter("save");
 			if(toSave!=null){

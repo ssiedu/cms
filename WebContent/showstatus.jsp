@@ -1,17 +1,9 @@
 <%@page import="com.ssi.DataUtil,java.sql.*"%>
 <%
-
-Cookie ck[]=request.getCookies();
-String email="";
-for(Cookie c:ck){
-	String name=c.getName();
-	if(name.equals("mailId")){
-		email=c.getValue();
-		break;
-	}
+String email=(String)session.getAttribute("userid");
+if(email==null){
+	response.sendRedirect("custlogin.jsp");
 }
-
-
 String qr="select * from complaint where email=?";
 Connection con=DataUtil.connect();
 PreparedStatement ps=con.prepareStatement(qr);

@@ -28,4 +28,7 @@
     <servlet-name>VerifyAdmin</servlet-name>
     <url-pattern>/VerifyAdmin</url-pattern>
   </servlet-mapping>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
 </web-app>

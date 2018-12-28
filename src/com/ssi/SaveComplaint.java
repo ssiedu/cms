@@ -3,7 +3,6 @@ package com.ssi;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 
 import javax.servlet.ServletException;
@@ -11,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/SaveComplaint")
 public class SaveComplaint extends HttpServlet {
@@ -35,7 +35,10 @@ public class SaveComplaint extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		PrintWriter out=response.getWriter();
-		String email=request.getParameter("email");
+		//reading email from session
+		HttpSession session=request.getSession();
+		String email=(String) session.getAttribute("userid");
+		//String email=request.getParameter("email");
 		String pcode=request.getParameter("pcode");
 		String ctext=request.getParameter("ctext");
 		java.util.Date dt=new java.util.Date();

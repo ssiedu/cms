@@ -12,9 +12,6 @@
 <h3>Customer-Complaint-Form</h3>
 <form action="SaveComplaint" method="post">
 <table>
-<tr>
-	<td>Email</td><td><input type="text" name="email"/></td>
-</tr>
 <tr>	
 	<td>Product</td><td><select name="pcode">
 	<%

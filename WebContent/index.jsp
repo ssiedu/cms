@@ -1,3 +1,6 @@
+<%
+//session.setMaxInactiveInterval(200);
+%>
 <html>
 <body>
 <h3>Customer-Care</h3>
