@@ -12,7 +12,7 @@
 	<h5>If you remain idle for <%=n%> seconds your session will expire</h5>
 	<hr>
 	<pre>
-		<a href="">Change-Profile</a>
+		<a href="profileupdateform.jsp">Change-Profile</a>
 		<a href="complaint.jsp">Complaint</a>
 		<a href="showstatus.jsp">Complaint-Status</a>
 		<a href="">Cancel-Complaint</a>

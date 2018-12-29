@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DataUtil {
+	
 public static Connection connect(){
 	Connection con=null;
 	try{
