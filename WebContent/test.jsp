@@ -1,0 +1,20 @@
+
+
+
+<%@page import="java.sql.*,java.util.*" %>
+
+
+<%
+	ResultSet rs;
+	Stack stk;
+%>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

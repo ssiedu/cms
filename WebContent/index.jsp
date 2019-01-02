@@ -1,3 +1,4 @@
+<%@include file="info.jsp" %>
 <%
 //session.setMaxInactiveInterval(200);
 %>
@@ -14,3 +15,4 @@
 <hr>
 </body>
 </html>
+<%@include file="footer.jsp" %>

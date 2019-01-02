@@ -1,13 +1,5 @@
 
 <%@page import="com.ssi.*"%>
-
-<!-- 
-	html-comment
- -->
-<%--
-	jsp-comment
- --%>
-
 <jsp:declaration>
 	public String convert(String s){
 	return s.toUpperCase();

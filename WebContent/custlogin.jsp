@@ -1,3 +1,4 @@
+<%@include file="info.jsp" %>
 <%
 	//step-1 (fetch all cookies)
 	Cookie ck[]=request.getCookies();

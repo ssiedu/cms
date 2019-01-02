@@ -7,10 +7,8 @@ public class Customer {
 	private String address;
 	private String mobile;
 	
-	
-	
 	public Customer() {
-		super();
+		
 	}
 	public Customer(String email, String password, String cname,
 			String address, String mobile) {
