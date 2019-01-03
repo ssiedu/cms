@@ -1,7 +1,7 @@
 <html>
 <body>
 <h3>Product-Search-Form</h3>
-<form action="showproduct.jsp">
+<form action="SearchController">
 	PCode <input type="text" name="t1"/>
 	<input type="submit" value="Search"/>
 </form>

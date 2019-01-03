@@ -1,19 +1,13 @@
-<%@page import="com.ssi.*,java.sql.*"%>
-
-
-<jsp:useBean id="pr" class="com.ssi.Product"/>
-<jsp:setProperty property="pcode" name="pr" param="t1"/>
-
-
+<jsp:useBean id="info" class="com.ssi.Product" scope="session" />
 
 <html>
 <body>
 <h3>Product-Details</h3>
 <hr>
 <pre>
-	PCode		<jsp:getProperty name="pr" property="pcode"/>
-	PName		<jsp:getProperty name="pr" property="pname"/>
-	Price		<jsp:getProperty name="pr" property="price"/>
+	PCode		<jsp:getProperty name="info" property="pcode"/>
+	PName		<jsp:getProperty name="info" property="pname"/>
+	Price		<jsp:getProperty name="info" property="price"/>
 </pre>
 <hr>
 <a href="psearch.jsp">Search-Again</a><br>

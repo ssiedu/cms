@@ -6,6 +6,9 @@
 	java.sql.ResultSet rs=ps.executeQuery();
 %>
 <html>
+ <head>
+  <meta http-equiv="refresh" content="30">
+</head> 
 <body>
 <h3>All-Pending-Complaints</h3>
 <table border="2">
