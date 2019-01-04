@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -33,7 +34,8 @@ public class VerifyCustomer extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		try{
-		con = DataUtil.connect();
+		ServletContext context=getServletContext();	
+		con = (Connection)context.getAttribute("mycon");
 		ps=con.prepareStatement("select cname from customer where email=? and password=?");
 		}catch(Exception e){e.printStackTrace();}
 	}

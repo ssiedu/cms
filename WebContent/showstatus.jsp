@@ -1,11 +1,14 @@
 <%@page import="com.ssi.DataUtil,java.sql.*"%>
 <%
 String email=(String)session.getAttribute("userid");
+/*
 if(email==null){
 	response.sendRedirect("custlogin.jsp");
 }
+*/
 String qr="select * from complaint where email=?";
-Connection con=DataUtil.connect();
+//Connection con=DataUtil.connect();
+Connection con=(Connection)application.getAttribute("mycon");
 PreparedStatement ps=con.prepareStatement(qr);
 ps.setString(1,email);
 ResultSet rs=ps.executeQuery();

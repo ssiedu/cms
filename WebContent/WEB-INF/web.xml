@@ -4,6 +4,9 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <listener>
+    <listener-class>com.ssi.RequestHandler</listener-class>
+  </listener>
   <servlet>
     <servlet-name>A</servlet-name>
     <servlet-class>com.ssi.SaveCustomer</servlet-class>

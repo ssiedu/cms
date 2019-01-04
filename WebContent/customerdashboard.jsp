@@ -1,10 +1,12 @@
 <%
 	String email=(String)session.getAttribute("userid");
+/*
 	if(email==null){
 		response.sendRedirect("custlogin.jsp");
 	}
-	
+*/	
 	int n=session.getMaxInactiveInterval();
+	
 %>
 <html>
 <body>
